@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <h2><strong>To-Do List</strong></h2>
+    <a href="#">login</a>
+    <div class="container1">
+        <div class="add-task">
+            <input type="text" placeholder="Add Text" id="candidate">
+            <button onClick="addVal()" class="btn">ADD</button>
+        </div>
+        <div class="task-list">
+            <p id="lol">today task list</p>
+            <ul id="box">
+                <li id="kok" >grocery <button id="new" onclick="rem(this.parentNode.id)">❌</button></li>
+                <li id="j">car wash <button id="new" onclick="rem(this.parentNode.id)">❌</button></li>
+                <li id="list-item">assignment <button id="new" onclick="rem(this.parentNode.id)">❌</button></li>
+                <script>
+                    
+                    let count = {val : "",
+                                num : 0,
+                };
+                    
+                    function rem(id) {
+                       
+                       console.log(id);
+                        let remove = document.querySelector("#box");
+
+                        let ele = document.querySelector(`#${id}`);
+                        console.log(ele);
+                        remove.removeChild(ele);
+                    }
+                    function createMenu (name) {
+                        let li = document.createElement('li');
+                        let cand = document.getElementById('candidate');
+                        let x = cand.value.split(" ").join("");
+                        console.log(x);
+                        li.setAttribute('id', x);
+                        li.innerHTML = ` ${name} <button onclick="rem(this.parentNode.id)">❌</button>`;
+                        
+                        return li;
+                    }
+
+                    
+                    
+                    function addVal() {
+                        val = document.querySelector('input').value;
+                        console.log(val);
+                        const menu = document.querySelector("#box");
+                        menu.appendChild(createMenu(val));
+                        document.querySelector('input').value = "";
+                    }
+                    
+                   
+                </script>
+                
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>

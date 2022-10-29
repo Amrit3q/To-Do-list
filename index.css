@@ -1,0 +1,74 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container1 {
+    position: relative;
+    display: flex;
+    width: 26rem;
+    height: 27rem;
+    margin: 50px 460px;
+    border: 5px solid rgb(53, 30, 133) ;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 8px;
+}
+
+#lol{
+    position: sticky;
+    background-color: #cae8ca;
+}
+
+.add-task {
+    margin: auto;
+    flex-shrink: 0;
+    position: absolute;
+    width: 340px;
+    height: 50px;
+    top: 1rem;
+}
+
+.btn{
+
+}
+
+input {
+    height: 44px;
+    width: 260px;
+    border: 2px solid #888888;
+    border-radius: 8px;
+    outline: none;
+    background: transparent;
+}
+
+.task-list{
+    
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    overflow: auto;
+    top: 1rem;
+    height: 19rem;
+}
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    padding: none;
+    margin: none;
+}
+
+li {
+    margin: 12px 9px;
+    width: 287px;
+    height: 45px;
+    border: 0.5px solid rgb(50, 32, 117);
+    padding: 8px 18px;
+    border-radius: 8px;
+
+}
+
+button {
+    float: right;
+}
