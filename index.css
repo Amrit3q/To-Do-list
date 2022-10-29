@@ -1,36 +1,74 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
 }
+a {
+    text-decoration: none;
+    float: right;
+    position: absolute;
+    right: 2rem;
+    top: 1.2rem;
+    background-color: greenyellow;
+    padding: 0.5rem 2rem;
+}
+a:hover {
+    background-color: rgb(144, 227, 20);
+}
+
+header {
+    background-color: #888888;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+body{
+    background: greenyellow;
+}
 
 .container1 {
+    background: #fff;
     position: relative;
     display: flex;
     width: 26rem;
     height: 27rem;
     margin: 50px 460px;
-    border: 5px solid rgb(53, 30, 133) ;
+    padding: 1rem 1rem;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     border-radius: 8px;
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.2);
+    top: 8rem;
 }
 
 #lol{
     position: sticky;
-    background-color: #cae8ca;
+    margin: 2px;
+    padding: 2px;
+    background-color: greenyellow;
+    top: 0;
+    text-align: center;
+}
+
+h2{
+    position: relative;
+    left: 3rem;
 }
 
 .add-task {
     margin: auto;
     flex-shrink: 0;
-    position: absolute;
+    position: relative;
     width: 340px;
     height: 50px;
     top: 1rem;
 }
 
 .btn{
-
+    padding: 0.5rem 0.5rem;
+    border-radius: 20px;
 }
 
 input {
@@ -66,7 +104,7 @@ li {
     border: 0.5px solid rgb(50, 32, 117);
     padding: 8px 18px;
     border-radius: 8px;
-
+    cursor: pointer;
 }
 
 button {
